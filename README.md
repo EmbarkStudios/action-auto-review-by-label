@@ -6,10 +6,7 @@
 
 <div align="center">
 
-# `:github: Auto Review by Label`
-
-<!--- FIXME: Write short catchy description/tagline of project --->
-**Template for creating new open source repositories that follow the Embark open source guidelines**
+# `➡️ Auto Review by Label`
 
 <!--- FIXME: Update crate, repo and CI workflow names here! Remove any that are not relevant --->
 [![Build Status](https://github.com/EmbarkStudios/action-auto-review-by-label/workflows/test/badge.svg)](https://github.com/EmbarkStudios/action-auto-review-by-label/actions?workflow=test)
@@ -50,7 +47,7 @@ The following options are supported:
 
 Removing the choosen label doesn't remove the reveiw from the PR. This is because once github records a positive review, dismissing it only converts it back to a pending review.
 
-A pending review can interfere with merge rules that require all approvals to be green. So instead we leave the review in place, allowing human users to manage this manually.
+A pending review can interfere with merge rules that require all approvals to be green. So instead we leave the review in place, requiring human users to manually intervene if necessary. 
 
 ## Contributing
 
