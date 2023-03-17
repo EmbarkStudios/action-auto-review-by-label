@@ -1,0 +1,17 @@
+name: autoreview-by-label
+description: Automatically adds a review in the presence of a label
+author: EmbarkStudios
+branding:
+  icon: book-open
+  color: purple
+inputs:
+  github-token:
+    description: Github token for the bot account performing auto reviews
+    default: ${{ github.token }}
+  label-name:
+    description: Label that will trigger auto review (Note, review won't be dismissed when the label is removed, this must be done manually)
+  bot-username:
+    description: Github nick name for the bot account, used to avoid detecting existing reviews
+runs:
+  using: node16
+  main: dist/index.js
