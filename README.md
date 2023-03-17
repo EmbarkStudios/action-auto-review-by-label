@@ -30,7 +30,7 @@ jobs:
 
     steps:
       - uses: actions/setup-node@v1
-      - uses: thefuntastic/pr-reviewer-bot@main
+      - uses: EmbarkStudios/action-auto-review-by-label
         with:
           github-token: ${{ secrets.BOT_TOKEN }}
           bot-username: thefuntastic
