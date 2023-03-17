@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/getsentry/typescript-action.git"
+    "url": "git+https://github.com/EmbarkStudios/action-auto-review-by-label"
   },
   "keywords": [
     "actions",
     "node",
     "setup"
   ],
-  "author": "Sentry",
+  "author": "EmbarkStudios",
   "license": "MIT",
   "husky": {
     "hooks": {
