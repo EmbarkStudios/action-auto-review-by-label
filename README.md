@@ -37,7 +37,7 @@ jobs:
           label-name: skip-review
 ```
 
-The following options are supported:
+The following options are required:
 
 - `github-token`: Personal access token for the account performing reviews. Note that the built-in github actions token does not have permission for review approval, so a new token must be generated. For details on generating a new token, see the [offical guide](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 - `bot-username`: Username of the account associated with the token - is used to detect existing reviews. Will result in review approval spam if misconfigured.
@@ -45,7 +45,7 @@ The following options are supported:
 
 ## Limitations
 
-Removing the choosen label doesn't remove the reveiw from the PR. This is because once github records a positive review, dismissing it only converts it back to a pending review.
+Removing the chosen label doesn't remove the review from the PR. This is because once github records a positive review, dismissing it only converts it back to a pending review.
 
 A pending review can interfere with merge rules that require all approvals to be green. So instead we leave the review in place, requiring human users to manually intervene if necessary. 
 

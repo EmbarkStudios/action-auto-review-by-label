@@ -23,7 +23,7 @@ async function run(): Promise<void> {
   }
 
   if (!GITHUB_EVENT_PATH) {
-    core.debug('No GITHUB_EVENT_PATH environment vaiable set');
+    core.debug('No GITHUB_EVENT_PATH environment variable set');
     return;
   }
 
