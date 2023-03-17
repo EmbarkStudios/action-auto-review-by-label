@@ -27,6 +27,11 @@ async function run(): Promise<void> {
     return;
   }
 
+  if (!labelName) {
+    core.debug('No input defining label-name found');
+    return;
+  }
+
   if (!botUsername) {
     core.debug('No input defining bot-username found');
     return;

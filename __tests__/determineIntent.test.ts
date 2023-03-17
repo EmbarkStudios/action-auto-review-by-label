@@ -5,12 +5,6 @@ import {Intent} from '../src/types/intent';
 // Possible Github states for PRs: APPROVED, REQUEST_CHANGES, COMMENT, PENDING
 
 test('Approve when labeled and no review exists', () => {
-  const input: Review = {
-    id: 1234,
-    user: null,
-    state: 'APPROVED',
-  };
-
   expect(determineIntent(true, undefined)).toEqual(Intent.Approve);
 });
 
