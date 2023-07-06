@@ -54,8 +54,6 @@ function isGithubLabelEvent(event: unknown): event is GithubLabelEvent {
     typeof labelEvent.repository.owner.login === 'string' &&
     typeof labelEvent.pull_request === 'object' &&
     typeof labelEvent.pull_request.number === 'number' &&
-    typeof labelEvent.pull_request.title === 'string' &&
-    typeof labelEvent.pull_request.body === 'string' &&
     Array.isArray(labelEvent.pull_request.labels)
   );
 }
