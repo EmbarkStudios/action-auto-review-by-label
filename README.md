@@ -68,6 +68,13 @@ yarn dist
 
 `yarn dist` is necessary to update `dist/index.js`, which is the actual output used by the github action. The workflow `.github/workflows/publish.yml` should call these in case you forget.
 
+Generally speaking the unit tests try to mock up the data as receieved from Github. However, if you want to execute in a live environment, you can do so by first creating a branch on this repository, eg `testing`. You can then open a branch on your target repository, and modify the workflow file to point to this branch, i.e. 
+
+```
+ - uses: EmbarkStudios/action-auto-review-by-label@testing
+```
+This should allow you to trigger live CI, but without having to push to main on either repo
+
 ## Contributing
 
 [![Contributor Covenant](https://img.shields.io/badge/contributor%20covenant-v1.4-ff69b4.svg)](CODE_OF_CONDUCT.md)
