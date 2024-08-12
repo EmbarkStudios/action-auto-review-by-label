@@ -164,6 +164,7 @@ const token = core.getInput('github-token') || core.getInput('githubToken');
 const octokit = token && github.getOctokit(token);
 const labelName = core.getInput('label-name');
 const botUsername = core.getInput('bot-username');
+// See the README.md for maintainers notes
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         if (!octokit) {
