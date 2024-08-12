@@ -16,6 +16,8 @@ const octokit = token && github.getOctokit(token);
 const labelName = core.getInput('label-name');
 const botUsername = core.getInput('bot-username');
 
+// See the README.md for maintainers notes
+
 async function run(): Promise<void> {
   if (!octokit) {
     core.debug('No octokit client');

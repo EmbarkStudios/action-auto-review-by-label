@@ -49,6 +49,25 @@ Removing the chosen label doesn't remove the review from the PR. This is because
 
 A pending review can interfere with merge rules that require all approvals to be green. So instead we leave the review in place, requiring human users to manually intervene if necessary. 
 
+## Maintenance
+
+This project uses node, typescript and yarn as a package manager. These are common web technologies, but if you're getting started you will need to install node and yarn. 
+
+```
+yarn install
+```
+
+Will initialize the project and download dependencies
+
+Now you should be able to call various yarn commands as defined in `package.json`, but the important will be:
+
+```
+yarn test 
+yarn dist
+```
+
+`yarn dist` is necessary to update `dist/index.js`, which is the actual output used by the github action. The workflow `.github/workflows/publish.yml` should call these in case you forget.
+
 ## Contributing
 
 [![Contributor Covenant](https://img.shields.io/badge/contributor%20covenant-v1.4-ff69b4.svg)](CODE_OF_CONDUCT.md)

@@ -1,4 +1,4 @@
-import { parseGithubLabelEvent } from '../src/types/githubEvent';
+import {parseGithubLabelEvent} from '../src/types/githubEvent';
 
 const input = `{
   "action": "labeled",
@@ -73,7 +73,6 @@ test('Postive case', () => {
 
   expect(data.action).toEqual('labeled');
 });
-
 
 test('Test no title/body', () => {
   //PR without title or body will be caught by the octobors rules, don't need to filter here

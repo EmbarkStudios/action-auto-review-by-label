@@ -1,0 +1,26 @@
+name: publish
+
+# Ensure the typescript > js files are updated on every push
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: yarn install
+      - run: yarn all
+
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add dist/index.js
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update published file" && git push)
+
