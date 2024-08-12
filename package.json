@@ -1,8 +1,8 @@
 {
-  "name": "action-git-diff-suggestions",
+  "name": "auto-reivew-by-label",
   "version": "0.0.0",
   "private": true,
-  "description": "GitHub action that takes a git patch and makes GitHub Code Review suggestions",
+  "description": "GitHub action adds a bot review in the presence of a label",
   "main": "lib/main.js",
   "scripts": {
     "build": "yarn tsc",
@@ -44,7 +44,7 @@
     "@types/node": "^14.6.1",
     "@typescript-eslint/eslint-plugin": "^3.10.1",
     "@typescript-eslint/parser": "^3.10.1",
-    "@vercel/ncc": "^0.24.0",
+    "@vercel/ncc": "^0.38.1",
     "eslint": "^7.7.0",
     "eslint-config-sentry": "^1.43.0",
     "eslint-plugin-jest": "^23.20.0",
